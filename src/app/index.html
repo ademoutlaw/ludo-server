@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDO</title>
+    <link rel="stylesheet" href="./css/dice.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/main.js" defer type="module"></script>
+</head>
+<body>
+    <div id="game">
+        <div class="board load" id="board">
+            <section id="targets"></section>
+            <section id="cells"></section>
+            <section id="stables">
+            </section>
+        </div>
+        
+        <div id="home">
+            <input type="text" id="name">
+            <select id="color"></select>
+            <button id="start">start</button>
+        </div>
+        <div id="home2" class="hide">
+            <div id="roomId"></div>
+            <div id="players">
+
+            </div>
+        </div>
+
+    </div>
+    <template id="dice">
+        <div class="dice even-roll" data-roll="1">
+            <ol class="dice-list">
+              <li class="dice-item" data-side="1">
+                <span class="dot"></span>
+              </li>
+              <li class="dice-item" data-side="2">
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="dice-item" data-side="3">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="dice-item" data-side="4">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="dice-item" data-side="5">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+              <li class="dice-item" data-side="6">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </li>
+            </ol>
+            
+          </div>
+    </template>
+</body>
+</html>

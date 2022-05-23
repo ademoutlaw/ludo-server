@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDO</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="selctors">
+        <select id="color">
+            <option value="0">red</option>
+            <option value="1">green</option>
+            <option value="2">yellow</option>
+            <option value="3">blue</option>
+        </select>
+        <select id="object">
+            <option value="empty">empty</option>
+            <option value="solid">solid</option>
+            <option value="star">star</option>
+            <option value="arrow">arrow</option>
+            <option value="target">target</option>
+            <option value="home">home</option>
+        </select>
+        <select id="direction">
+            <option value="up">up</option>
+            <option value="right">right</option>
+            <option value="down">down</option>
+            <option value="left">left</option>
+        </select>
+        <select id="max">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </div>
+    <div class="board">
+        <section class="homes">
+            <div class="home top-left"></div>
+            <div class="home top-right"></div>
+            <div class="home bottom-right"></div>
+            <div class="home bottom-left"></div>
+        </section>
+        <section id="targets"></section>
+        <section id="cells"></section>
+    </div>
+    <div class="ctrl">
+        <button id="setNext">set path</button>
+        <textarea id="output" cols="30" rows="10"></textarea>
+    </div>
+</body>
+</html>

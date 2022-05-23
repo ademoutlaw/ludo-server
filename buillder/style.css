@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	background: radial-gradient(#9c27b0, #000000);
+}
+
+.selctors {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 0;
+}
+
+.board {
+	position: relative;
+	width: min(100vw, calc(100vh - 230px));
+	height: min(100vw, calc(100vh - 230px));
+	background-color: #d2691e1f;
+	margin: 0 auto 10px;
+}
+.board section {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+#cells {
+	display: grid;
+	grid-template-columns: repeat(15, 1fr);
+	grid-template-rows: repeat(15, 1fr);
+}
+
+span {
+	background-color: white;
+	border: 0.5px solid black;
+	overflow: hidden;
+	color: white;
+}
+.red {
+	--color: red;
+}
+.green {
+	--color: green;
+}
+.yellow {
+	--color: #ffdb00;
+}
+.blue {
+	--color: blue;
+}
+.solid {
+	background-color: var(--color);
+}
+.arrow {
+	color: var(--color);
+	font-size: 36px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+}
+.star {
+	color: rgb(0 0 0);
+	font-size: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+}
+.arrow.right,
+.arrow.left {
+	justify-content: stretch;
+}
+.arrow.up::after {
+	content: '\2B6B';
+}
+.arrow.right::after {
+	content: '\2B6C';
+}
+.arrow.down::after {
+	content: '\2B6D';
+}
+.arrow.left::after {
+	content: '\2B6A';
+}
+.star::after {
+	content: '\2730';
+}
+.hide {
+	opacity: 0;
+}
+
+.home {
+	width: 40%;
+	position: absolute;
+	height: 40%;
+	border: 1px solid;
+	background: yellow;
+}
+
+.home.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+.home.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+
+.home.top-left {
+	top: 0;
+	left: 0;
+}
+
+.home.top-right {
+	top: 0;
+	right: 0;
+}
+
+.lint {
+	border: 6px dotted orange;
+}
